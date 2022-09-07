@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Peticiones http xammp</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="botones.css">
+</head>
+<body>
+	<button id="boton-nombre">Obtener Nombre</button>
+	<button id="boton-edad">Obtener Edad</button>
+	<button id="borrar">X</button>
+	<div class="resultado">
+		<div class="nombre">Nombre: <b class="d-nombre"></b></div>
+		<div class="edad" >Edad: <b class="d-edad"></b></div>
+	</div>
+	<img class="imagen">
+	<div class="contenedor-botones">
+		<button id="boton-1" class="boton uno"><span>presiona 1</span></button>
+		<button id="boton-2" class="boton dos"><span>presiona 2</span></button>
+		<button id="boton-3" class="boton tres"><span>presiona 3</span></button>
+		<button id="boton-4" class="boton cuatro"><span>presiona 4</span></button>
+		<button id="boton-5" class="boton cinco">
+			<div class="icono">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+				</svg></div>
+			<span>presiona 5</span>
+		</button>
+		<button id="boton-6" class="boton seis">
+			<span>presiona 6</span>
+			<svg>
+				<rect x="0" y="0" fill="none"></rect>
+			</svg>
+		</button>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="codigo.js"></script>
+</body>
+</html>
