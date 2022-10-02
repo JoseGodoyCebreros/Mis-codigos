@@ -1,0 +1,148 @@
+body {
+	font-family: cursive;
+	background: url("img/supermercado.jpg") no-repeat;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+.titulo{
+	background: greenyellow;
+	text-align: center;
+	border-radius: 100px;
+	border: solid darkblue;
+	padding: 20px;
+}
+
+.titulos {
+	background: red;
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border: solid black 1px;
+}
+
+.titulo-tabla {
+	font-size: 20px;
+	font-weight: bold;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	border: solid 1px;
+	background: blue;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-table{
+	position: relative;
+	top: 30px;
+	width: 80%;
+	text-align: center;
+	background: white;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-auto-rows: 25px;
+	border: solid 3px;
+}
+
+
+footer{
+	margin-top: 50px;
+}
+
+.precios{
+	background: greenyellow;
+	height: 100%;
+	border: none;
+	cursor: pointer;
+	border-radius: 30%;
+}
+
+.table_item{
+	border: solid 0.01px;
+	display: flex;
+	justify-content: center;
+}
+
+.div-formulario{
+	position: relative;
+	top: 200px;
+	height: 300px;
+	width: 1000px;
+	border: 1px solid;
+}
+
+form{
+	height: 260px;
+	width: 1000px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px 20px;
+	border: 2px solid;
+	position: relative;
+	margin-top: 100px;
+	background-attachment: fixed;
+}
+
+h3{
+	font-size: 30px;
+	position: absolute;
+	top: -20px;
+	left: 20px;
+}
+
+#enviar{
+	text-transform: uppercase;
+	font-weight: bold;
+	position: absolute;
+	width: 200px;
+	left: 20px;
+	bottom: 20px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#enviar:hover{
+	background: #2CD929;
+	border-radius: 5px;
+}
+
+#com-nombre{
+	position: absolute;
+	top: 60px;
+	height: 30px;
+	width: 95%;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#coment-input{
+	font-size: 20px;
+	font-family: sans-serif;
+	resize: none;
+	position: absolute;
+	width: 95%;
+	padding-bottom: 30px;
+	left: 20px;
+	top: 100px;
+	margin-top: 10px;
+}
+
+#coment-input::placeholder{
+	position: absolute;
+	top: 0;
+}
+
+.comentarios{
+	background: rgba(255,255,255,0.7);
+	position: relative;
+	padding: 20px;
+	padding-top: 5px;
+	width: 80%;
+	top: 80px;
+
+	border: solid black;
+}
