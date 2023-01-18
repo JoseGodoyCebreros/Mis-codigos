@@ -1,0 +1,47 @@
+*{
+	font-family: sans-serif;
+}
+
+.pantalla{
+	background: #F8FCF9;
+	font-size: 50px;
+	overflow: hidden;
+	width: 550px;
+	height: 50px;
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+
+.numero, .signos{
+	display: inline-block;
+	border: solid 2px;
+	width: 80px;
+	height: 60px;
+	font-size: 50px;
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+	background: #FEF0F0;
+	border-radius: 4px;
+	margin: 30px;
+}
+
+.signos {
+	background: #9D8D8D;
+	font-weight: bold;
+}
+
+.numero:hover, .signos:hover{
+	background: #473E3E;
+	font-weight: bold;
+}
+
+.numeros {
+	margin-top: 20px;
+	background: #CE1414;
+	position: absolute;
+	border-radius: 20px;
+}
