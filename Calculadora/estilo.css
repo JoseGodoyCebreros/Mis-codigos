@@ -3,7 +3,7 @@
 }
 
 .pantalla{
-	background: #F8FCF9;
+	background: #F2F9F3;
 	font-size: 50px;
 	overflow: hidden;
 	width: 550px;
@@ -39,9 +39,11 @@
 	font-weight: bold;
 }
 
+
 .numeros {
 	margin-top: 20px;
 	background: #CE1414;
 	position: absolute;
 	border-radius: 20px;
+    user-select: none; 
 }
