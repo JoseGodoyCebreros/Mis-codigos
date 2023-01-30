@@ -1,141 +1,176 @@
-var pantalla = document.getElementById('pantalla');
-
-var operadorA;
-var operadorB;
-var operacion;
+let pantalla = document.getElementById('pantalla');
+let cantNumeros = 0;
+let cantOperaciones = 0;
+let auxiliar = "";
+let numeros = [];
+let operaciones = [];
 
 function init(){
 
-	var reset = document.getElementById('reiniciar');
-	var suma = document.getElementById('suma');
-	var resta = document.getElementById('resta');
-	var multiplicacion = document.getElementById('multiplicacion');
-	var division = document.getElementById('division');
-	var igual = document.getElementById('igual');
+	let reset = document.getElementById('reiniciar');
+	let suma = document.getElementById('suma');
+	let resta = document.getElementById('resta');
+	let multiplicacion = document.getElementById('multiplicacion');
+	let division = document.getElementById('division');
+	let igual = document.getElementById('igual');
 	
-	var uno = document.getElementById('uno');
-	var dos = document.getElementById('dos');
-	var tres = document.getElementById('tres');
-	var cuatro = document.getElementById('cuatro');
-	var cinco = document.getElementById('cinco');
-	var seis = document.getElementById('seis');
-	var siete = document.getElementById('siete');
-	var ocho = document.getElementById('ocho');
-	var nueve = document.getElementById('nueve');
-	var cero = document.getElementById('cero');
+	let uno = document.getElementById('uno');
+	let dos = document.getElementById('dos');
+	let tres = document.getElementById('tres');
+	let cuatro = document.getElementById('cuatro');
+	let cinco = document.getElementById('cinco');
+	let seis = document.getElementById('seis');
+	let siete = document.getElementById('siete');
+	let ocho = document.getElementById('ocho');
+	let nueve = document.getElementById('nueve');
+	let cero = document.getElementById('cero');
 
 	
+	function recibeNumeros( numeroIngresado) {
+    	auxiliar = auxiliar + numeroIngresado;
+  	  mostrarEnPantalla( auxiliar );
+	}
+
+        
 	uno.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "1";
+		recibeNumeros(1)
 	}
 
 	dos.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "2";
+		recibeNumeros(2)
 	}
+
 	tres.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "3";
+		recibeNumeros(3)
 	}
+
 	cuatro.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "4";
+		recibeNumeros(4)
 	}
+	
 	cinco.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "5";
+		recibeNumeros(5)
 	}
+
 	seis.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "6";
+		recibeNumeros(6)
 	}
+
 	siete.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "7";
+		recibeNumeros(7)
 	}
+
 	ocho.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "8";
+		recibeNumeros(8)
 	}
+
 	nueve.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "9";
+		recibeNumeros(9);
 	}
 
 	cero.onclick = function(e){
-		pantalla.textContent = pantalla.textContent + "0";
+		pantalla.textContent === '0' || numeros.length === 0 
+		? pantalla.textContent = 0
+	 	: recibeNumeros(0);
 	}
 
 	reset.onclick = function(e){
-		pantalla.textContent = "";
+		resetear();
 	}
 
 	suma.onclick = function(e){
-		operadorA = pantalla.textContent;
-		operacion = "+",
+		recibeOperaciones("+")
 		limpiar();
 	}
 
 	resta.onclick = function(e){
-		operadorA = pantalla.textContent;
-		operacion = "-",
+		recibeOperaciones("-")
 		limpiar();
 	}
 
 	multiplicacion.onclick = function(e){
-		operadorA = pantalla.textContent;
-		operacion = "*",
+		recibeOperaciones("*")
 		limpiar();
 	}
 
 	division.onclick = function(e){
-		operadorA = pantalla.textContent;
-		operacion = "/",
+		recibeOperaciones("/")
 		limpiar();
 	}
 
 	igual.onclick = function(e){
-		operadorB = pantalla.textContent;
-		resolver();
+		recibeOperaciones("=")
 	}
 
 }
 
-function limpiar(){
-	pantalla.textContent = "";
-}
-
-function resetear(){
-	pantalla.textContent = "";
-	operadorA = 0;
-	operadorB = 0;
-	operacion = "";
-}
-
-
-function resolver(){
-	var res = 0;
-
-	switch(operacion){
-		case "+":
-			res = parseFloat(operadorA) + parseFloat(operadorB);
-			break;
-
-		case "-":
-			res = parseFloat(operadorA) - parseFloat(operadorB);
-			break;
-
-		case "*":
-			res = parseFloat(operadorA) * parseFloat(operadorB);
-			break;
-
-		case "/":
-			res = parseFloat(operadorA) / parseFloat(operadorB);
-			break;
-		}
-
-		resetear();
-
-		pantalla.textContent = res;
+	function limpiar(){
+		pantalla.textContent = "";
 	}
 
+	function resetear(){
+		numeros = [];
+		operaciones = [];
+		cantNumeros = 0;
+	    cantOperaciones = 0;
+		auxiliar = ""
+		limpiar();
+	}
+
+	function mostrarEnPantalla( numero ) {
+	    pantalla.textContent = numero;
+	}
+
+
+function recibeOperaciones( operacionIngresada ) {
+    numeros.push(pantalla.textContent);
+    
+    if( operacionIngresada == "=" ) {
+    	
+        resuelve();
+    }
+    else{
+
+        operaciones.push( operacionIngresada );
+        
+        if (pantalla.textContent != "") {
+        	cantOperaciones++;
+        	cantNumeros++;
+        }
+        auxiliar = "";
+    }
+}
+
+function resuelve() {
+
+    let numeroA = numeros[ 0 ];
+
+    for( i = 1; i <= cantNumeros; i++ ) {
+        numeroA = operar( numeroA, numeros[ i ], operaciones[i - 1] );
+	    
+    }
+    mostrarEnPantalla(numeroA);
+
+    numeros = []
+    operaciones = []
+	cantOperaciones = 0;
+	cantNumeros = 0;
+}
+
+function operar( numeroA, numeroB, operacion ) {
+    if( operacion == "+" ) {
+        return parseInt(numeroA) + parseInt(numeroB);
+    }
+    else if( operacion == "-" ) {
+        return parseInt(numeroA) - parseInt(numeroB);
+    }
+    else if( operacion == "/" ) {
+        return parseInt(numeroA) / parseInt(numeroB);
+    }
+    else if( operacion == "*" ) {
+        return parseInt(numeroA) * parseInt(numeroB);
+    }
+
+}
 
 init();
-
-// let numero = prompt("Ingresa un numero: ")
-
-// numero *= 12;
-
-// document.write("su numero multiplicado por 12 es: " + numero)
