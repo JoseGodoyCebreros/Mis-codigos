@@ -100,6 +100,7 @@ function init(){
 
 	igual.onclick = function(e){
 		recibeOperaciones("=")
+		auxiliar = "";
 	}
 
 }
