@@ -9,9 +9,16 @@
 
 .titulo{
 	text-align: center;
-	font-family: monospace;
+	font-family: fantasy;
 	padding: 0rem 0 3rem 0;
 	font-size: 5rem;
+}
+
+.descripcion{
+	text-align: center;
+	font-family: monospace;
+	padding: 0rem 0 3rem 0;
+	font-size: 3.3rem;
 }
 
 .div-botones{
@@ -53,7 +60,7 @@
 	border: solid 2px;
 	width: 10rem;
 	height: 100%;
-	font-size: 50px;
+	font-size: 4rem;
 	text-align: center;
 	align-items: center;
 	cursor: pointer;
@@ -64,6 +71,10 @@
 .signos {
 	background: #471AEF;
 	font-weight: bold;
+}
+
+#reiniciar{
+	font-size: 2rem;
 }
 
 .numero:hover {
@@ -91,4 +102,3 @@
 	display: flex;
 	justify-content: center;
 }
-
