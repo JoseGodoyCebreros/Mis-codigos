@@ -1,49 +1,79 @@
 *{
 	font-family: sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: #BCBCBC;
+}
+
+.div-contenedor p{
+	font-family: monospace;
+	padding: 0rem 0 3rem 0;
+	font-size: 40px;
+}
+
+.div-botones{
+	background: transparent;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 20px;
+	margin: 20px;
+}
+
+.div-botones div{
+	display: flex;
+	justify-content: center;
 }
 
 .pantalla{
-	background: #F2F9F3;
-	font-size: 50px;
-	overflow: hidden;
-	width: 550px;
+	background: #ffff;
+	font-size: 30px;
+	width: 98%;
+	margin-top: 20px;
 	height: 50px;
 	padding: 10px;
-	margin: 10px;
-	display: inline-block;
-	margin-top: 20px;
+	display: block;
 	border-radius: 4px;
 }
 
 .numero, .signos{
-	display: inline-block;
 	border: solid 2px;
-	width: 80px;
-	height: 60px;
+	width: 100%;
+	height: 100%;
 	font-size: 50px;
 	text-align: center;
 	align-items: center;
 	cursor: pointer;
-	background: #FEF0F0;
+	background: #137D27;
 	border-radius: 4px;
-	margin: 30px;
 }
 
 .signos {
-	background: #9D8D8D;
+	background: #471AEF;
 	font-weight: bold;
 }
 
-.numero:hover, .signos:hover{
-	background: #473E3E;
+.numero:hover {
+	background: #0F320D;
+	font-weight: bold;
+}
+
+.signos:hover{
+	background: #0E1541;
 	font-weight: bold;
 }
 
 
-.numeros {
-	margin-top: 20px;
+.calculadora {
+	margin: 0 4rem;
+	height: 35rem;
+	width: 80%;
 	background: #CE1414;
-	position: absolute;
 	border-radius: 20px;
-    user-select: none; 
+    user-select: none;
+    margin-bottom: 5rem;
 }
+
