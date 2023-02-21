@@ -1,6 +1,6 @@
 *{
 	font-family: sans-serif;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	background: #BCBCBC;
@@ -33,19 +33,22 @@
 .div-botones div{
 	display: flex;
 	justify-content: center;
+	margin: 0 0.5rem;
 }
 
 .div-pantalla{
 	background: transparent;
+	width: 100%;
+	padding: 1rem;
 }
 
 .pantalla{
 	background: #ffff;
+	width: 100%;
 	display: flex;
 	justify-content: start;
 	align-items: center;
 	font-size: 50px;
-	margin: 1rem;
 	height: 90px;
 	padding: 10px;
 	border-radius: 4px;
@@ -88,6 +91,8 @@
 
 
 .calculadora {
+	display: flex;
+	flex-direction: column;
 	margin: 0 4rem;
 	height: 50rem;
 	width: 50rem;
