@@ -1,0 +1,68 @@
+.titulo{
+	font-size: 4.5rem;
+	background: #24D530;
+	text-align: center;
+	border-radius: 100px;
+	border: solid darkblue;
+	padding: 20px;
+}
+
+.container-table{
+	margin-top: 3rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+b{
+	font-weight: bold;
+}
+
+.tabla{
+	display: grid;
+	width: 80%;
+	grid-template-columns: 4;
+	align-items: center;
+}
+
+.titulo-tabla {
+	font-size: 2rem;
+	font-weight: bold;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	border: solid 0.1rem;
+	background: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tabla_titulos {
+	background: red;
+	height: 3rem;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border: solid black 0.1rem;
+}
+
+.precios{
+	background: greenyellow;
+	height: 100%;
+	border: none;
+	cursor: pointer;
+	border-radius: 30%;
+}
+
+.table_item{
+	border: solid 0.1px;
+	font-size: 2rem;
+	height: 100%;
+	background: #ffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6rem;
+}

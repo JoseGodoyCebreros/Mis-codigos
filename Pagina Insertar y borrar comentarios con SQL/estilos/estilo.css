@@ -1,0 +1,72 @@
+@import url('abarrotes.css');
+@import url('formComentarios.css');
+
+:root{
+	font-size: 10px;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.FORMULARIO-Y-COMENTARIOS{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+body {
+	font-family: cursive;
+	background: url("../img/supermercado.jpg") no-repeat;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+@media screen and (max-width: 300px ){
+	:root{
+	font-size: 3px;
+	}
+}
+
+@media screen and (max-width: 800px ){
+	form{
+		width: 70%;
+	}
+
+	.FORMULARIO-Y-COMENTARIOS{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.div-formulario{
+		display: flex;
+		justify-content: center;
+		margin-top: 7rem;
+		width: 100%;
+	}
+
+	.div-comentarios{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+
+	#coment-input{
+		padding-bottom: 8rem;
+	}
+
+
+	form{
+		height: 35rem;
+	}
+
+	:root{
+	font-size: 12px;
+	}
+}
+
