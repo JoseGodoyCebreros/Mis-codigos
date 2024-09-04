@@ -26,9 +26,19 @@ function init(){
 	let cero = document.getElementById('cero');
 
 	
-	function recibeNumeros( numeroIngresado) {
+	function recibeNumeros( numeroIngresado) {		
     	auxiliar = auxiliar + numeroIngresado;
-  	  mostrarEnPantalla( auxiliar );
+
+	//Para evitar los ceros
+	if(pantalla.textContent === "0" && numeroIngresado === 0){
+		return;
+		
+	}else if (pantalla.textContent === "0" && numeroIngresado !== 0){
+		pantalla.textContent = numeroIngresado;
+		auxiliar = numeroIngresado.toString();
+		return;
+	} else {
+		mostrarEnPantalla(auxiliar)
 	}
 
         
